@@ -1,0 +1,22 @@
+USE [libreria]
+GO
+
+/****** Object:  Table [dbo].[Rating]    Script Date: 12/11/2023 02:18:33 p. m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Rating](
+	[Id_Rating] [int] NOT NULL,
+	[Valor] [int] NOT NULL,
+	[Estatus] [bit] NOT NULL,
+ CONSTRAINT [PK_Rating] PRIMARY KEY CLUSTERED 
+(
+	[Id_Rating] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .registro{
+            background-color: #333;
+            width: 30%;
+            height: 450px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 30px;
+            border: 20px solid #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .inicio_sesion{
+            background-color: #333;
+            width: 30%;
+            height: 300px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 30px;
+            border: 20px solid #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .two-columns{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .fields{
+            display: flex;
+            flex-direction: column;   
+        }
+
+        label{
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #dedede;
+            font-size: 14px;
+        }
+
+        input,textarea{
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            padding: 10px;
+            color: #fff;
+            transition: all 0.3s;
+        }
+        input:focus,textarea:focus{
+         outline: none;
+        }
+
+        input:focus{
+            border-bottom: 2px solid rgba(255, 255, 255, 1);
+        }
+
+        textarea{
+            resize: none;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            flex-basis: 100px;
+            transition: all 0.3s;
+        }
+
+        textarea:focus{
+            border: 2px solid rgba(255, 255, 255, 1);
+        }
+
+        .btn{
+            display: flex;
+            justify-content: center;
+        }
+
+        button{
+            padding: 15px 40px;
+            background: #1baea990;
+            border: none;
+            font-size: 15px;
+            font-weight: 700px;
+            text-transform: uppercase;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3;
+        }
+
+        button:hover{
+            padding: 15px 70px;
+            background: #1baea9;
+        }
+
+        .tablas{
+            color: black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button .edicion{
+            justify-content: center;
+            text-align:center;
+            padding: 10px 30px;
+            background: #1baea990;
+            border: none;
+            font-size: 15px;
+            font-weight: 100px;
+            text-transform: uppercase;
+            color: #fff;
+
+        }
+</style>
+</head>
+<body>
+
+    <div class="two-columns">
+    <form id="inicio_sesion" action="" class="inicio_sesion">
+        <label >Inicio Sesion</label>
+        <div >
+            <div class="fields">
+        <label for="correo">Correo</label>
+        <input id="correo" type="email" name="correo" autocomplete="off">
+            </div>
+            <div class="fields">
+                <label for="pasword">Contraseña</label>
+                <input id="pasword" type="text" name="pasword" autocomplete="off" >
+                    </div>
+            </div>
+            <div class="two-columns">
+                <div class="btn">
+                    <button>Entrar</button>
+                </div>   
+                <div class="btn">
+                    <button>Registro</button>
+                </div>   
+            </div>
+             
+    </form>
+
+    <form id="registro" action="" class="registro">
+        <label >Registro Usuario</label>
+        <div class="two-columns">
+            <div class="fields">
+        <label for="name_user">Nombre de Usuario</label>
+        <input id="name_uset" type="text" name="name_user" autocomplete="off">
+            </div>
+            <div class="fields">
+                <label for="pasword">Contraseña</label>
+                <input id="pasword" type="text" name="pasword" autocomplete="off" >
+                    </div>
+            </div>
+            <div class="two-columns">
+            <div class="fields">
+            <label for="name_user">Nombre</label>
+            <input id="name" type="text" name="name" autocomplete="off">
+            </div>
+            <div class="fields">
+                <label for="lastname1">Apellido Paterno</label>
+                <input id="lastname1" type="text" name="lastname1" autocomplete="off">
+                    </div>
+             </div>
+             
+            <div class="two-columns">
+                <div class="fields">
+                    <label for="lastname2">Apellido Materno</label>
+                    <input id="lastname2" type="text" name="lastname2" autocomplete="off">
+                        </div>
+                <div class="fields">
+            <label for="email">Email</label>
+            <input id="email" type="text" name="email" autocomplete="off">
+                </div>
+                </div>
+
+                <div class="two-columns">
+                <div class="fields">
+                    <label for="tel">Telefono</label>
+                    <input id="tel" type="text" name="tel" autocomplete="off">
+                        </div>
+                        <div class="fields">
+                            <label for="puesto">Puesto</label>
+                            <input id="puesto" type="text" name="puesto" autocomplete="off">
+                                </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="fields">
+                            <label for="tel">Departamento</label>
+                            <input id="dep" type="text" name="dep" autocomplete="off">
+                                </div>
+                                <div class="fields">
+                                    <label for="tipo_User">Tipo Usuario</label>
+                                    <input id="tipo_User" type="text" name="tipo_User" autocomplete="off">
+                                        </div>
+                            </div>
+                <div class="btn">
+        <button>Registrar</button>
+    </div>   
+    </form>
+</div>
+<br>
+<br>
+<br>
+<div >
+    <label class="tablas">Ventas</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Venta</th>
+            <th>Id_Tipo_Cliente</th>
+            <th>Id_Tipo_Pago</th>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Detalle Ventas</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Detalle</th>
+            <th>Id_Tipo_Cliente</th>
+            <th>Id_Descuento</th>
+            <th>Id_Libro_ISBN</th>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Puesto</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Puesto</th>
+            <th>Id_Nombre</th>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Usuario</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Usuario</th>
+            <th>Nombre_Usuario</th>
+            <th>Contraseña</th>
+            <th>Nombre</th>
+            <th>Apellido_Paterno</th>
+            <th>Apellido_Materno</th>
+            <th>Email</th>
+            <th>Telefono</th>
+            <th>Email</th>
+            <th>Id_Puesto</th>
+            <th>Id_Departamento</th>
+            <th>Id_Tipo Usuario</th>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Tipo_Usuario</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Tipo_Usuario</th>
+            <th>Nombre</th>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Tipo_Pago</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Tipo_Pago</th>
+            <th>Nombre</th>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Categoria</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Categoria</th>
+            <th>Nombre</th>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Libro</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Libro_ISBN</th>
+            <th>Titulo</th>
+            <th>Id_Categoria</th>
+            <th>Volumen</th>
+            <th>Id_Tipo_Formato</th>
+            <th>Id_Editorial</th>
+            <th>Fecha_Publicacion</th>
+            <th>Paginas</th>
+            <th>Precio</th>
+            <th>Id_Rating</th>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Tipo_Formato</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Tipo_Formato</th>
+            <th>Nombre</th>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Departamento</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Departamento</th>
+            <th>Departamento</th>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Autor</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Autor</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha_Nacimiento</th>
+            <th>Id_Pais</th>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Editorial</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Editorial</th>
+            <th>Nombre</th>
+            <th>Id_Ciudad</th>
+            <th>Año_Inaguracion</th>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <label class="tablas">Libro_Autores</label>
+    <table border="1" class="tablas">
+        <tr>
+            <th>Id_Libro_Autores</th>
+            <th>Id_Libro_ISBN</th>
+            <th>Id_Autor</th>
+        </tr>
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+
+        <tr>
+            <td><br></td>
+            <td><br></td>
+            <td><br></td>
+        </tr>
+    </table>
+    <br>
+    <button class="edicion">Crear</button>
+    <button class="edicion">Editar</button>
+    <button class="edicion">Eliminar</button>
+</div>
+</body>
+</html>
